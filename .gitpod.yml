@@ -12,7 +12,6 @@ ports:
 tasks:
   - init: >
       mysql -u root -e "create database example_app" &&
-      #composer global require laravel/installer &&
       composer install &&
       export PATH="$PATH:$HOME/.composer/vendor/bin" &&
       laravel new workshop &&      
