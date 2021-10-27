@@ -1,0 +1,14 @@
+{
+    "name": "gitpod/work-shop",
+    "description": "Um exemplo da arquitetura Competi",
+    "require": {
+        "laravel/framework": "^8.68",
+        "laravel/tinker": "^2.6"
+    },
+    "authors": [
+        {
+            "name": "allysonpdm",
+            "email": "allysonmt@gmail.com"
+        }
+    ]
+}
