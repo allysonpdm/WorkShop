@@ -13,8 +13,7 @@ tasks:
   - init: >
       mysql -u root -e "create database example_app" &&
       composer install &&
-      export PATH="$PATH:$HOME/.composer/vendor/bin" &&
-      laravel new workshop &&      
+      export PATH="$PATH:$HOME/.composer/vendor/bin" &&     
       npm i &&
       cp .env.example .env &&
       sed -i "s|APP_URL=|APP_URL=${GITPOD_WORKSPACE_URL}|g" .env &&
