@@ -40,6 +40,8 @@
         ],
         "post-root-package-install": [
             "@php -r \"file_exists('.env') || copy('.env.example', '.env');\""
+             "sed -i \"s|APP_URL=|APP_URL=${GITPOD_WORKSPACE_URL}|g\" .env", 
+             "sed -i \"s|APP_URL=https://|APP_URL=https://8000-|g\" .env"
         ],
         "post-create-project-cmd": [
             "@php artisan key:generate --ansi"
