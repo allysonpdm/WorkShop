@@ -15,10 +15,7 @@ tasks:
   - init: >
       mysql -u root -e "create database example_app" &&
       composer install &&
-      cd workshop &&
-      npm i &&
+      npm i
     command: >
-      cd workshop &&
-      php artisan key:generate &&
       php -S  127.0.0.1:8000 -t public
   
