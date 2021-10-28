@@ -8,6 +8,8 @@ ports:
   # MySQL server
   - port: 3306
     onOpen: ignore
+  - port: 9000
+    onOpen: ignore
 
 tasks:
   - init: >
@@ -52,7 +54,7 @@ vscode:
     - felixfbecker.php-intellisense
     - ms-ceintl.vscode-language-pack-pt-br
     - felixfbecker.php-pack
-    - felixfbecker.php-debug
+    - felixfbecker.php-debug@1.13.0:WX8Y3EpQk3zgahy41yJtNQ==
     - mehedidracula.php-namespace-resolver
     - bmewburn.vscode-intelephense-client
     - junstyle.php-cs-fixer
