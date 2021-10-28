@@ -27,6 +27,8 @@ tasks:
       php artisan vendor:publish --provider="Competi\CompetiLaravel\Providers\JwtProvider" &&
       sed -i ':a;N;$!ba;s/\* Package Service Providers...\n         \*\//\* Package Service Providers...\n         \*\/\n         Competi\\CompetiLaravel\\Providers\\JwtProvider::class,/g' config/app.php &&
       cp auth.example config/auth.php &&
+      cp BaseController.example app/Http/Controllers/Api/BaseController.php &&
+      rm app/Http/Controllers/Api/Controller.php &&
       php artisan jwt:secret &&
       php -S 127.0.0.1:8000 -t public
   - command: >
