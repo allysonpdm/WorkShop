@@ -32,6 +32,7 @@ tasks:
       mv auth.example config/auth.php &&
       mv BaseController.example app/Http/Controllers/Api/BaseController.php &&
       mv AlunoController.example app/Http/Controllers/Api/AlunoController.php &&
+      mv AlunoService.example app/Services/AlunoServices.php &&
       mv 2021_10_28_152125_create_alunos_table.example database/migrations/2021_10_28_152125_create_alunos_table.php &&
       mv ModelBase.example app/Models/ModelBase.php &&
       mv Alunos.example app/Models/Alunos.php &&      
