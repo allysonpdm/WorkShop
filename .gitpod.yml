@@ -25,7 +25,7 @@ tasks:
       npm i &&
       php artisan key:generate &&
       php artisan vendor:publish --provider="Tymon\JWTAuth\Providers\LaravelServiceProvider" &&
-      sed -i "s|         * Package Service Providers...\r\n         */|         * Package Service Providers...\n         */\r\nTymon\JWTAuth\Providers\LaravelServiceProvider::class,|g" &&
+      sed -i "s|         * Package Service Providers...\r\n         */|         * Package Service Providers...\n         */\r\nTymon\JWTAuth\Providers\LaravelServiceProvider::class,|g" config/app.php &&
       php artisan jwt:secret
       command: >
       php -S 127.0.0.1:8000 -t public
