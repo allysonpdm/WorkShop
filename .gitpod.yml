@@ -24,7 +24,7 @@ tasks:
       composer update &&
       npm i &&
       php artisan key:generate &&
-      php artisan vendor:publish --provider="Tymon\JWTAuth\Providers\LaravelServiceProvider" &&
+      php artisan vendor:publish --provider="Competi\CompetiLaravel\Providers\JwtProvider" &&
       sed -i ":a;N;$!ba;s|         \* Package Service Providers...\n         \*\/|         * Package Service Providers...\n         */\n         Tymon\JWTAuth\Providers\LaravelServiceProvider::class,|g" config/app.php&&
       php artisan jwt:secret
       command: >
