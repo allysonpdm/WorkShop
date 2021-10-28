@@ -1,0 +1,15 @@
+<?php
+
+namespace App\Services;
+
+use App\Models\Alunos;
+use Competi\CompetiLaravel\Services\CrudService;
+use Competi\CompetiLaravel\Services\Resposta;
+
+class AlunosService extends CrudService
+{
+    public function getModel($data = [])
+    {
+        return new Alunos($data);
+    }
+}
