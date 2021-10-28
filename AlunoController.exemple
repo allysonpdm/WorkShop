@@ -1,0 +1,19 @@
+<?php
+
+namespace App\Http\Controllers\Api;
+
+use App\Services\AlunoService;
+use Illuminate\Http\Request;
+
+class AlunoController extends BaseController
+{
+    /**
+     * @var AlunoService
+     */
+    protected $service;
+
+    public function __construct(AlunoService $service)
+    {
+        $this->service = $service;
+    }
+}
