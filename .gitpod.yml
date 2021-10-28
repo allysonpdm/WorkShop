@@ -27,5 +27,5 @@ tasks:
       php artisan vendor:publish --provider="Competi\CompetiLaravel\Providers\JwtProvider" &&
       sed -i ":a;N;$!ba;s|         \* Package Service Providers...\n         \*\/|         * Package Service Providers...\n         */\n         Tymon\JWTAuth\Providers\LaravelServiceProvider::class,|g" config/app.php&&
       php artisan jwt:secret
-  - command: >
       php -S 127.0.0.1:8000 -t public
+  - command: >
