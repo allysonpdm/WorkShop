@@ -12,4 +12,14 @@ class AlunoService extends CrudService
     {
         return new Alunos($data);
     }
+
+    public function deactivate($id)
+    {
+        $model = $this->getModel()->find($id);
+        if (empty($model)) {
+            return Resposta::object(false, __('microservices.erros.dados_nao_encontrados'), null, null);
+        }        
+        $model->delete();
+        return Resposta::object(true, null, null, null);
+    }
 }
