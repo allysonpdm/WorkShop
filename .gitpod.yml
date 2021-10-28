@@ -49,4 +49,5 @@ vscode:
     - felixfbecker.php-intellisense
     - ms-ceintl.vscode-language-pack-pt-br
     - felixfbecker.php-pack
+    - felixfbecker.php-debug
 
