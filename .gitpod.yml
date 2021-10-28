@@ -25,7 +25,7 @@ tasks:
       npm i &&
       php artisan key:generate &&
       php artisan vendor:publish --provider="Competi\CompetiLaravel\Providers\JwtProvider" &&
-      sed -i ':a;N;$!ba;s/\* Package Service Providers...\n         \*\//\* Package Service Providers...\n         \*\/\n         Competi\CompetiLaravel\Providers\JwtProvider::class,/g' config/app.php
+      sed -i ':a;N;$!ba;s/\* Package Service Providers...\n         \*\//\* Package Service Providers...\n         \*\/\n         Competi\CompetiLaravel\Providers\JwtProvider::class,/g' config/app.php &&
       php artisan jwt:secret &&
       php -S 127.0.0.1:8000 -t public
   - command: >
