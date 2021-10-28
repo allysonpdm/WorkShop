@@ -44,3 +44,9 @@ tasks:
       php artisan optimize &&
       php -S 127.0.0.1:8000 -t public
  # - command: >
+vscode:
+  extensions:
+    - felixfbecker.php-intellisense
+    - ms-ceintl.vscode-language-pack-pt-br
+    - felixfbecker.php-pack
+
