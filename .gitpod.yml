@@ -51,4 +51,8 @@ vscode:
     - ms-ceintl.vscode-language-pack-pt-br
     - felixfbecker.php-pack
     - felixfbecker.php-debug
+    - mehedidracula.php-namespace-resolver
+    - bmewburn.vscode-intelephense-client
+    - junstyle.php-cs-fixer
+    - github.vscode-pull-request-github
 
