@@ -1,0 +1,22 @@
+<?php
+
+namespace App\Models;
+
+use Illuminate\Database\Eloquent\Model;
+
+class ModelBase extends Model
+{
+    public const CREATED_AT = 'dataCadastro';
+    public const UPDATED_AT = 'dataEdicao';
+    public $guardFromUpdate = [
+        'id',
+        'dataCadastro',
+        'dataEdicao',
+    ];
+    public static $snakeAttributes = false;
+    public $queryFilters = [];
+    protected $hidden = [
+        'dataCadastro',
+        'dataEdicao',
+    ];
+}
