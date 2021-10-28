@@ -17,7 +17,7 @@ class CreateAlunosTable extends Migration
         Schema::create('alunos', function (Blueprint $table) {
             $table->id();            
             $table->char('cpf', 11)->unique('UNIQUE_CPF');
-            $table->char('nome', 3)->index('alunos_nome_idx');
+            $table->char('nome', 50)->index('alunos_nome_idx');
             $table->date('nascimento')->index('alunos_nascimento_idx');
             $table->timestamp('dataCadastro')->useCurrent();
             $table->timestamp('dataEdicao')->default(DB::raw('CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP'));
