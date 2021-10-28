@@ -2,7 +2,7 @@
 
 namespace App\Http\Requests;
 
-class AlunoRequest extends Request
+class AlunoRequest extends BaseRequest
 {
     public function rules()
     {
