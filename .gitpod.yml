@@ -15,7 +15,7 @@ tasks:
       composer global require laravel/installer &&
       export PATH="~/.composer/vendor/bin:$PATH" &&
       laravel new workshop &&
-      cp -R workshop . &&
+      cp -R workshop/* . &&
       rm -R worshop &&
       composer update &&
       cp composer.exemple workshop/composer.json &&
