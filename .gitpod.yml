@@ -23,6 +23,9 @@ tasks:
       sed -i "s|APP_URL=https://|APP_URL=https://8000-|g" .env &&
       composer update &&
       npm i &&
-      php artisan key:generate
+      php artisan key:generate &&
+      php artisan vendor:publish --provider="Tymon\JWTAuth\Providers\LaravelServiceProvider" &&
+      php artisan jwt:secret
+      sed -i "s|         * Package Service Providers...\r\n         */|         * Package Service Providers...\n         */\r\nTymon\JWTAuth\Providers\LaravelServiceProvider::class,|g" &&
     command: >
       php -S 127.0.0.1:8000 -t public
