@@ -11,7 +11,7 @@ class AlunoController extends BaseController
      * @var AlunoService
      */
     protected $service;
-    protected $request = ComponentesValoresRequest::class;
+    protected $request = AlunoRequest::class;
 
     public function __construct(AlunoService $service)
     {
