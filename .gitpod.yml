@@ -39,6 +39,7 @@ tasks:
       mv RespostaValidacaoException.example app/Exceptions/RespostaValidacaoException.php &&
       mv BaseRequest.example app/Http/Request/BaseRequest.php &&
       mv BaseRequest.example app/Http/Request/AlunoRequest.php &&
+      mv api.example routes/api.php &&
       php artisan migrate &&
       php artisan jwt:secret &&
       php artisan optimize &&
