@@ -36,6 +36,6 @@ tasks:
       mv Alunos.example app/Models/Alunos.php &&      
       php artisan migrate &&
       php artisan jwt:secret &&
-      php artizan optimize &&
+      php artisan optimize &&
       php -S 127.0.0.1:8000 -t public
  # - command: >
