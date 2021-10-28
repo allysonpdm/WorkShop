@@ -37,8 +37,8 @@ tasks:
       mv ModelBase.example app/Models/ModelBase.php &&
       mv Alunos.example app/Models/Alunos.php &&
       mv RespostaValidacaoException.example app/Exceptions/RespostaValidacaoException.php &&
-      mv BaseRequest.example app/Http/Request/BaseRequest.php
-      mv BaseRequest.example app/Http/Request/AlunoRequest.php
+      mv BaseRequest.example app/Http/Request/BaseRequest.php &&
+      mv BaseRequest.example app/Http/Request/AlunoRequest.php &&
       php artisan migrate &&
       php artisan jwt:secret &&
       php artisan optimize &&
