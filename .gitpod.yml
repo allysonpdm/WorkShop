@@ -26,6 +26,7 @@ tasks:
       php artisan key:generate &&
       php artisan vendor:publish --provider="Competi\CompetiLaravel\Providers\JwtProvider" &&
       sed -i ':a;N;$!ba;s/\* Package Service Providers...\n         \*\//\* Package Service Providers...\n         \*\/\n         Competi\\CompetiLaravel\\Providers\\JwtProvider::class,/g' config/app.php &&
+      mkdir app/Http/Requests &&
       mkdir app/Http/Controllers/Api/ &&
       mkdir app/Http/Controllers/Auth &&
       mkdir app/Services &&
@@ -37,8 +38,8 @@ tasks:
       mv ModelBase.example app/Models/ModelBase.php &&
       mv Alunos.example app/Models/Alunos.php &&
       mv RespostaValidacaoException.example app/Exceptions/RespostaValidacaoException.php &&
-      mv BaseRequest.example app/Http/Request/BaseRequest.php &&
-      mv BaseRequest.example app/Http/Request/AlunoRequest.php &&
+      mv BaseRequest.example app/Http/Requests/BaseRequest.php &&
+      mv BaseRequest.example app/Http/Requests/AlunoRequest.php &&
       mv api.example routes/api.php &&
       php artisan migrate &&
       php artisan jwt:secret &&
