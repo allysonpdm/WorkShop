@@ -26,10 +26,14 @@ tasks:
       php artisan key:generate &&
       php artisan vendor:publish --provider="Competi\CompetiLaravel\Providers\JwtProvider" &&
       sed -i ':a;N;$!ba;s/\* Package Service Providers...\n         \*\//\* Package Service Providers...\n         \*\/\n         Competi\\CompetiLaravel\\Providers\\JwtProvider::class,/g' config/app.php &&
+      mkdir app/Http/Controllers/Api/ &&
+      mkdir app/Http/Controllers/Auth &&
+      mkdir app/Services &&
       mv auth.example config/auth.php &&
       mv BaseController.example app/Http/Controllers/Api/BaseController.php &&
       mv 2021_10_28_152125_create_alunos_table.example database/migrations/2021_10_28_152125_create_alunos_table.php &&
-      rm app/Http/Controllers/Api/Controller.php &&
+      php artisan migrate &&
       php artisan jwt:secret &&
+      php artizan optimize &&
       php -S 127.0.0.1:8000 -t public
-  - command: >
+ # - command: >
