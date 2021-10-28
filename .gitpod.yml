@@ -14,9 +14,11 @@ tasks:
       mysql -u root -e "CREATE DATABASE workshop" &&      
       composer global require laravel/installer &&
       export PATH="~/.composer/vendor/bin:$PATH" &&
-      laravel new --force . &&
-      cp composer.exemple workshop/composer.json &&
+      laravel new workshop &&
+      cp -R workshop . &&
+      rm -R worshop &&
       composer update &&
+      cp composer.exemple workshop/composer.json &&
       cp .env.example .env &&
       sed -i "s|APP_URL=|APP_URL=${GITPOD_WORKSPACE_URL}|g" .env &&
       sed -i "s|APP_URL=https://|APP_URL=https://8000-|g" .env &&
@@ -24,4 +26,3 @@ tasks:
       php artisan key:generate
     command: >
       php -S 127.0.0.1:8000 -t public
-      
