@@ -1,0 +1,13 @@
+<?php
+
+namespace App\Models;
+
+class Alunos extends ModelBase
+{
+    protected $table = 'alunos';
+    protected $fillable = [
+        'cpf',
+        'nome',
+        'nascimento',
+    ];
+}
