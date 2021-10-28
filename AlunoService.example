@@ -6,7 +6,7 @@ use App\Models\Alunos;
 use Competi\CompetiLaravel\Services\CrudService;
 use Competi\CompetiLaravel\Services\Resposta;
 
-class AlunosService extends CrudService
+class AlunoService extends CrudService
 {
     public function getModel($data = [])
     {
