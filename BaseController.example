@@ -32,9 +32,12 @@ class BaseController extends JsonCrudController
         return isset($this->request) ? app($this->request) : $request;
     }
 
+    /*
+    TODO: login
     protected function prepareFilters($data)
     {
         $data['empresaId'] = Auth::user()->empresaId;
         return $data;
     }
+    */
 }
