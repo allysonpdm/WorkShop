@@ -10,12 +10,14 @@ ports:
     onOpen: ignore
 
 tasks:
-#      composer global require laravel/installer &&
-#      export PATH="$PATH:$HOME/.composer/vendor/bin" && 
   - init: >
       mysql -u root -e "create database example_app" &&
+      cp .env.example .env &&
+      sed -i "s|APP_URL=|APP_URL=${GITPOD_WORKSPACE_URL}|g" .env &&
+      sed -i "s|APP_URL=https://|APP_URL=https://8000-|g" .env &&
       composer install &&
-      npm i
+      npm i &&
+      php artisan key:generate
     command: >
-      php -S  127.0.0.1:8000 -t public
-  
+      php -S 0.0.0.0:8000 -t public
+      
