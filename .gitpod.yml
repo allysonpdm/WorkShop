@@ -19,7 +19,7 @@ tasks:
       rm -R workshop &&      
       cp composer.example composer.json &&
       cp .env.example .env &&
-      sed -i "s|APP_URL=http://localhost|APP_URL=8000-${GITPOD_WORKSPACE_URL}|g" .env &&
+      sed -i "s|APP_URL=http://localhost|APP_URL=8000\-${GITPOD_WORKSPACE_URL}|g" .env &&
       composer update &&
       npm i &&
       php artisan key:generate &&
