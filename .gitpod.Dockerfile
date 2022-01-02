@@ -11,8 +11,15 @@ RUN sudo touch /var/log/workspace-image.log \
 
 RUN echo 'debconf debconf/frontend select Noninteractive' | sudo debconf-set-selections \
     && sudo apt-get update -q \
-    && sudo apt-get -y install php7.4-fpm rsync grc shellcheck \
+    && sudo apt-get -y install php7.4-fpm rsync grc shellcheck php-apcu php-imagick \
+    && sudo apt-get remove composer -y \
     && sudo apt-get clean
-
-RUN sudo rm /usr/bin/composer &&
-    && php -v
+    
+COPY ./php.ini /etc/php/7.4/mods-available/php.ini
+RUN sudo ln -s /etc/php/7.4/mods-available/php.ini /etc/php/7.4/cli/conf.d/40-php.ini && \
+    sudo curl -o /usr/bin/composer https://getcomposer.org/composer.phar && \
+    sudo chmod +x /usr/bin/composer && \
+    sudo composer selfupdate && \
+    sudo rm -rf /root/.composer && \
+    composer global require drush/drush-launcher && \
+    echo 'export PATH="$PATH:~/.config/composer/vendor/bin"' >> ~/.bashrc
