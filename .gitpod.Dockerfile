@@ -13,8 +13,7 @@ RUN echo 'debconf debconf/frontend select Noninteractive' | sudo debconf-set-sel
     && sudo apt-get update -q \
     && sudo apt-get -y install php7.4-fpm rsync grc shellcheck php-apcu php-imagick \
     && sudo apt-get remove composer -y \
-    && sudo apt-get clean
-    
+    && sudo apt-get clean    
 
 RUN sudo curl -o /usr/bin/composer https://getcomposer.org/composer.phar && \
     sudo chmod +x /usr/bin/composer && \
