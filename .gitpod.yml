@@ -28,7 +28,7 @@ tasks:
       sed -i "s|APP_URL=http://localhost|APP_URL=${GITPOD_WORKSPACE_URL}|g" .env &&
       sed -i "s|APP_URL=https://|APP_URL=https://8000\-|g" .env &&
       sed -i "s|CACHE_DRIVER=file|CACHE_DRIVER=array|g" .env &&
-      composer update &&
+      composer update --ignore-platform-reqs &&
       npm i &&
       php artisan key:generate &&
       php artisan vendor:publish --provider="Competi\CompetiLaravel\Providers\JwtProvider" &&
