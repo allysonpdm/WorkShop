@@ -18,7 +18,7 @@ ports:
 tasks:
   - init: >
       mysql -u root -e "CREATE DATABASE workshop" &&      
-      composer global require laravel/installer &&
+      composer global require laravel/installer --ignore-platform-reqs &&
       export PATH="~/.composer/vendor/bin:$PATH" &&
       laravel new workshop &&
       cp -rT workshop . &&
